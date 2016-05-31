@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 FILE_SIZE_LIMIT = 5400000  # approximately 5Mb
 BUCKET_SHORT_NAME_PATTERN = re.compile(
-    r'^digitalmarketplace-([^\-]+)-([^\-]+)-(\2)$'
+    r'^cirrus-([^\-]+)-([^\-]+)-(\2)$'
 )
 
 
