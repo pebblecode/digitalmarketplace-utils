@@ -10,6 +10,7 @@ def init_app(
         config_object,
         bootstrap=None,
         data_api_client=None,
+        order_api_client=None,
         db=None,
         feature_flags=None,
         login_manager=None,
@@ -41,6 +42,8 @@ def init_app(
         login_manager.init_app(application)
     if search_api_client:
         search_api_client.init_app(application)
+    if order_api_client:
+        order_api_client.init_app(application)
 
     @application.after_request
     def add_header(response):
